@@ -1,5 +1,5 @@
-# project-swapper
-Project Time Management app
+# jobsite-timer-app
+Construction Site Time Management app
 
 A simple application to manage time worked at construction sites.
 
