@@ -18,11 +18,22 @@
         <p>Jobsite Time Tracker</p>
     </div>
 
-    <!-- <div class="watch">
+    <div class="watch">
+
+        <div class="menu">
+            <div class="menu-icon">...</div>
+            <div class="menu-content">
+                <button id="edit-site" onclick="editSite()">Edit</button>
+                <button id="delete-site" onclick="deleteSite()">Delete</button>
+            </div>
+        </div>
+
+        <div id="jobsite-name">355 Yorick Blvd</div>
+        <!-- <div id="time" class="time">00:00:00</div>
         <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
             <input type="text" id="jobsite-name" placeholder="355 Yorick Avenue">
             <input type="submit" value="Add" class="btn btn-primary">
-        </form>
+        </form> -->
         <div class="time">
             00:00:00
         </div>
@@ -31,9 +42,9 @@
             <button id="stop">Stop</button>
             <button id="reset">Reset</button>
         </div>
-    </div> -->
+    </div>
 
-    <div id="stopwatch" class="watch">
+    <!-- <div id="stopwatch" class="watch">
         <div class="menu">
             <div class="menu-icon">...</div>
             <div class="menu-content">
@@ -49,9 +60,9 @@
             <button id="start" onclick="startTimer()">Start</button>
             <button id="stop" onclick="stopTimer()">Stop</button>
             <button id="reset" onclick="resetTimer()">Reset</button>
-        </div>
+        </div> -->
 
-        <!-- SAVE/LOAD/DELETE 
+    <!-- SAVE/LOAD/DELETE 
         <div class="controls">
             <button id="save" onclick="saveTimer()">Save</button>
             <button id="load" onclick="loadTimer()">Load</button>

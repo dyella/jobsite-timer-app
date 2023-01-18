@@ -1,87 +1,87 @@
-// // Global variables
-// const time_el = document.querySelector('.watch .time');
-// const start_btn = document.getElementById('start');
-// const stop_btn = document.getElementById('stop');
-// const reset_btn = document.getElementById('reset');
+// Global variables
+const time_el = document.querySelector('.watch .time');
+const start_btn = document.getElementById('start');
+const stop_btn = document.getElementById('stop');
+const reset_btn = document.getElementById('reset');
 
-// let seconds = 0;
-// let interval = null;
+let seconds = 0;
+let interval = null;
 
-// // Event listeners
-// start_btn.addEventListener('click', start);
-// stop_btn.addEventListener('click', stop);
-// reset_btn.addEventListener('click', reset);
+// Event listeners
+start_btn.addEventListener('click', start);
+stop_btn.addEventListener('click', stop);
+reset_btn.addEventListener('click', reset);
 
-// // Update the timer
-// function timer() {
-//     seconds++;
+// Update the timer
+function timer() {
+    seconds++;
 
-//     // Format out time
-//     let hrs = Math.floor(seconds / 3600);
-//     let min = Math.floor((seconds - (hrs * 3600)) / 60);
-//     let sec = seconds % 60;
+    // Format out time
+    let hrs = Math.floor(seconds / 3600);
+    let min = Math.floor((seconds - (hrs * 3600)) / 60);
+    let sec = seconds % 60;
 
-//     if (sec < 10) sec = '0' + sec;
-//     if (min < 10) min = '0' + min;
-//     if (hrs < 10) hrs = '0' + hrs;
+    if (sec < 10) sec = '0' + sec;
+    if (min < 10) min = '0' + min;
+    if (hrs < 10) hrs = '0' + hrs;
 
-//     time_el.innerText = `${hrs}:${min}:${sec}`;
-// }
+    time_el.innerText = `${hrs}:${min}:${sec}`;
+}
 
-// function start() {
-//     if (interval) {
-//         return
-//     }
+function start() {
+    if (interval) {
+        return
+    }
 
-//     interval = setInterval(timer, 1000);
-// }
+    interval = setInterval(timer, 1000);
+}
 
-// function stop() {
-//     clearInterval(interval);
-//     interval = null;
-// }
+function stop() {
+    clearInterval(interval);
+    interval = null;
+}
 
-// function reset() {
-//     stop();
-//     seconds = 0;
-//     time_el.innerText = '00:00:00';
-// }
+function reset() {
+    stop();
+    seconds = 0;
+    time_el.innerText = '00:00:00';
+}
 
 //below is chatGPT
 
-let timer;
-let seconds = 0;
-let minutes = 0;
-let hours = 0;
+// let timer;
+// let seconds = 0;
+// let minutes = 0;
+// let hours = 0;
 
-function startTimer() {
-    timer = setInterval(() => {
-        seconds++;
+// function startTimer() {
+//     timer = setInterval(() => {
+//         seconds++;
 
-        if (seconds === 60) {
-            seconds = 0;
-            minutes++;
-        }
-        if (minutes === 60) {
-            minutes = 0;
-            hours++;
-        }
+//         if (seconds === 60) {
+//             seconds = 0;
+//             minutes++;
+//         }
+//         if (minutes === 60) {
+//             minutes = 0;
+//             hours++;
+//         }
 
-        document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}`;
-    }, 1000);
-}
+//         document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}`;
+//     }, 1000);
+// }
 
-function stopTimer() {
-    clearInterval(timer);
-}
+// function stopTimer() {
+//     clearInterval(timer);
+// }
 
-function resetTimer() {
-    clearInterval(timer);
-    seconds = 0;
-    minutes = 0;
-    hours = 0;
-    document.getElementById("time").innerHTML = "00:00:00";
-}
+// function resetTimer() {
+//     clearInterval(timer);
+//     seconds = 0;
+//     minutes = 0;
+//     hours = 0;
+//     document.getElementById("time").innerHTML = "00:00:00";
+// }
 
 function saveTimer() {
     // Save the current timer value to local storage
