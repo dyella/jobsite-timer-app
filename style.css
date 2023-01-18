@@ -1,0 +1,119 @@
+:root {
+    --primary: rgb(157, 45, 68);
+    --dark: #1F2937;
+    --darker: #111827;
+    --light: #F3F4F6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.title {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.title p {
+    font-size: 150%;
+}
+
+.watch {
+    text-align: center;
+    background-color: var(--darker);
+    width: 100%;
+    max-width: 360px;
+    margin: 4rem auto;
+    padding: 1rem rem;
+    border-radius: 1rem;
+}
+
+#jobsite-name {
+    padding-top: 25px;
+    font-size: 150%;
+    font-style: italic;
+}
+
+.time {
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.controls button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+
+
+    color: var(--light);
+    background-color: var(--primary);
+    width: 25%;
+    margin: 1%;
+    margin-bottom: 1rem;
+    /* padding: 0.5rem 1rem; */
+    border-radius: 0.5rem;
+    transition: 0.4s;
+}
+
+input[type='submit'],
+button,
+[aria-label] {
+    cursor: pointer;
+}
+
+#edit-box {
+    display: none;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button:active {
+    background-color: var(--dark);
+}
+
+
+/* drop-down menu for each timer */
+.menu {
+    position: relative;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
