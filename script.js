@@ -124,3 +124,20 @@ var menuContent = document.querySelector(".menu-content");
 menuIcon.addEventListener("click", function () {
     menuContent.style.display = (menuContent.style.display === "block") ? "none" : "block";
 });
+
+function displayDate() {
+    var currentDate = new Date();
+    var date = currentDate.getDate();
+    var month = currentDate.getMonth() + 1; // JavaScript months start at 0, so we add 1
+    var year = currentDate.getFullYear();
+    var dateDiv = document.getElementById("date");
+
+    month = (month < 10 ? "0" : "") + month;
+    date = (date < 10 ? "0" : "") + date;
+
+    dateDiv.innerHTML = month + "/" + date + "/" + year;
+}
+
+displayDate();
+
+setInterval(displayDate, 86400000);  // 24*60*60*1000

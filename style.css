@@ -22,7 +22,7 @@ body {
 }
 
 .title p {
-    font-size: 150%;
+    font-size: 180%;
 }
 
 .watch {
@@ -36,9 +36,15 @@ body {
 }
 
 #jobsite-name {
-    padding-top: 25px;
+    padding-top: 20px;
     font-size: 150%;
     font-style: italic;
+}
+
+#date {
+    padding-top: 15px;
+    font-size: 180%;
+    text-align: center;
 }
 
 .time {
